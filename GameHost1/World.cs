@@ -61,7 +61,7 @@ namespace GameHost1
             }
         }
 
-        private bool[,] GetMap()
+        public bool[,] GetMap()
         {
             bool[,] map = new bool[height, width];
 
@@ -76,7 +76,7 @@ namespace GameHost1
             return map;  
         }
 
-        public bool[,] TimePass()
+        public void TimePass()
         {
             foreach (Cell cell in member)
             {
@@ -84,16 +84,7 @@ namespace GameHost1
             }
 
             Check();
-
-            return GetMap();
-
         }
-
-        
-
-
-
-
 
 
     }

@@ -9,7 +9,26 @@ namespace GameHost1
         
         public static bool TimePassRule(bool[,] area)
         {
-            // TODO: fill your code here
+            int count = 0;
+
+            foreach(bool alive in area)
+            {
+                count += alive ? 1 : 0;
+            }
+
+            count -= area[1, 1] ? 1 : 0;
+
+            if(count == 2){
+                //area[1, 1] = area[1, 1];    
+            }  
+            else if(count == 3){
+                area[1, 1] = true;    
+            }  
+            else{
+                area[1, 1] = false;
+            }
+                    
+
             return area[1, 1];
         }
 
